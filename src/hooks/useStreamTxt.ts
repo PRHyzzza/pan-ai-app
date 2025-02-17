@@ -15,6 +15,8 @@ export default () => {
      * @param response
      */
     const getText = async (response: Response) => {
+
+        result.value = ""
         // 创建一个可读流
         const reader = response.body?.getReader();
         while (true) {

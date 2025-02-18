@@ -50,6 +50,7 @@ defineExpose({
 
 .message-close {
     cursor: pointer;
+    font-size: 20px;
     color: #909399;
 }
 
@@ -58,19 +59,19 @@ defineExpose({
 }
 
 .message-success {
-    border-left: 4px solid #67c23a;
+    border-left: 6px solid #67c23a;
 }
 
 .message-error {
-    border-left: 4px solid #f56c6c;
+    border-left: 6px solid#f56c6c;
 }
 
 .message-warning {
-    border-left: 4px solid #e6a23c;
+    border-left: 6px solid #e6a23c;
 }
 
 .message-info {
-    border-left: 4px solid #909399;
+    border-left: 6px solid #909399;
 }
 
 .message-enter-from,

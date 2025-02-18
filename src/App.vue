@@ -26,6 +26,9 @@ import message from "./components/message/message";
 
 <template>
   <button @click="message.success('This is a success message!')">Show Success</button>
+  <button @click="message.error('This is a error message!')">Show Error</button>
+  <button @click="message.warning('This is a warning message!')">Show Warning</button>
+  <button @click="message.info('This is a info message!')">Show Info</button>
 </template>
 
 <style scoped></style>

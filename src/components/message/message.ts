@@ -8,7 +8,7 @@ let messageId = 0
 type MessageOptions = {
   content: string
   duration?: number
-  type?: 'success' | 'error' | 'warning'
+  type?: 'success' | 'error' | 'warning' | 'info'
 }
 
 const createInstance = () => {
@@ -24,14 +24,17 @@ const createInstance = () => {
 }
 
 const message = {
-  success(content: string) {
-    this.show({ content, type: 'success' })
+  success(content: string, duration?: number) {
+    this.show({ content, type: 'success', duration })
   },
-  error(content: string) {
-    this.show({ content, type: 'error' })
+  error(content: string, duration?: number) {
+    this.show({ content, type: 'error', duration })
   },
-  warning(content: string) {
-    this.show({ content, type: 'warning' })
+  warning(content: string, duration?: number) {
+    this.show({ content, type: 'warning', duration })
+  },
+  info(content: string, duration?: number) {
+    this.show({ content, type: 'info', duration })
   },
   show(options: MessageOptions) {
     const instance = createInstance()
@@ -41,7 +44,7 @@ const message = {
       id: messageId,
       duration: options.duration || 3000,
       content: options.content,
-      type: options.type
+      type: options.type || 'info',
     })
   }
 }

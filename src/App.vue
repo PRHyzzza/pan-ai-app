@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, watch } from "vue";
+// import { ref, watch } from "vue";
 import message from "./components/message/message";
 // import { invoke } from "@tauri-apps/api/core";
 // import { generate } from "./api/ollama";

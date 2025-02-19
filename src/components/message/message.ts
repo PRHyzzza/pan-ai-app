@@ -2,7 +2,9 @@
 import { ComponentPublicInstance, createApp } from 'vue'
 import MessageComponent from './Message.vue'
 
-let instance: ComponentPublicInstance | null = null
+type MessageComponentType = InstanceType<typeof MessageComponent>
+
+let instance: ComponentPublicInstance<MessageComponentType> | null = null
 let messageId = 0
 
 type MessageOptions = {
@@ -39,7 +41,7 @@ const message = {
   show(options: MessageOptions) {
     const instance = createInstance()
     messageId++
-    // @ts-ignore
+
     instance.addMessage({
       id: messageId,
       duration: options.duration || 3000,

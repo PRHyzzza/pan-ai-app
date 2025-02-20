@@ -3,7 +3,7 @@ type sidebar = {
     menuItems?: { icon: string, text: string }[]
 }
 
-const { menuItems } = withDefaults(defineProps<sidebar>(), {})
+withDefaults(defineProps<sidebar>(), {})
 
 const isCollapsed = defineModel()
 
